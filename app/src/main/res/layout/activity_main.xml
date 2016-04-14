@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.example.android.simplemetalcalculator.MainActivity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/img_title"
+            android:src="@drawable/title_metall"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/ib_cd_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:text="@string/tv_type_of_metal"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:id="@+id/textView" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp">
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner"
+                    android:id="@+id/btn_img_round_pipe"
+                    android:src="@drawable/btn_img_round_pipe2"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/ib_cd_round_pipe"/>
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/round_corner"
+                    android:id="@+id/btn_img_profile_pipe"
+                    android:src="@drawable/btn_img_profile_pipe2"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/ib_cd_profile_pipe"/>
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner"
+                    android:id="@+id/btn_img_round_rod"
+                    android:src="@drawable/btn_img_round_rod2"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/ib_cd_round_rod"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp">
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner"
+                    android:id="@+id/btn_img_profile_rod"
+                    android:src="@drawable/btn_img_profile_rod2"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/ib_cd_profile_rod"/>
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/round_corner"
+                    android:id="@+id/btn_img_hexagon_rod"
+                    android:src="@drawable/btn_img_hexagon_rod2"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/ib_cd_hexagon_rod"/>
+
+                <ImageButton
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner"
+                    android:id="@+id/btn_img_sheet_metal"
+                    android:src="@drawable/btn_img_sheet_metal2"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/ib_cd_sheet_metal"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp">
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner"
+                    android:id="@+id/btn_img_corner"
+                    android:src="@drawable/btn_img_corner2"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/ib_cd_corner"/>
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/round_corner"
+                    android:id="@+id/btn_img_stripe"
+                    android:src="@drawable/btn_img_stripe2"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/ib_cd_stripe"/>
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner"
+                    android:id="@+id/btn_img_channel"
+                    android:src="@drawable/btn_img_channel2"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/ib_cd_channel" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp">
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/ib_cd_empty"/>
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/round_corner"
+                    android:id="@+id/btn_img_girders"
+                    android:src="@drawable/btn_img_girders2"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/ib_cd_girders"/>
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/ib_cd_empty"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+</LinearLayout>

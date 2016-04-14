@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Simpel Metal Calculator</string>
+    <string name="tv_type_of_metal">Choose type of metal:</string>
+    <string name="tv_round_pipe">Round Pipe</string>
+    <string name="tv_channel">Channel</string>
+    <string name="tv_hexagon_rod">Hexagon Rod</string>
+    <string name="tv_corner">Corner</string>
+    <string name="tv_girders">Girders</string>
+    <string name="tv_stripe">Stripe</string>
+    <string name="tv_profile_pipe">Profile Pipe</string>
+    <string name="tv_profile_rod">Profile Rod</string>
+    <string name="tv_round_rod">Round Rod</string>
+    <string name="tv_sheet_metal">Sheet Metal</string>
+    <string name="tv_dimensions">Dimensions</string>
+    <string name="tv_weight">Weight</string>
+    <string name="tv_result">0</string>
+
+    <string name="et_enter_a">Enter A(mm)</string>
+    <string name="et_enter_b">Enter B(mm)</string>
+    <string name="et_enter_c">Enter C(mm)</string>
+    <string name="et_enter_d">Enter D(mm)</string>
+    <string name="et_enter_length">Enter length(m)</string>
+    <string name="et_enter_thickness">Enter thickness(mm)</string>
+
+    <string name="ib_cd_round_pipe">Round Pipe Button</string>
+    <string name="ib_cd_profile_pipe">Profile Pipe Button</string>
+    <string name="ib_cd_round_rod">Round Rod Button</string>
+    <string name="ib_cd_profile_rod">Profile Rod Button</string>
+    <string name="ib_cd_hexagon_rod">Hexagon Rod Button</string>
+    <string name="ib_cd_sheet_metal">Sheet Metal Button</string>
+    <string name="ib_cd_corner">Corner Button</string>
+    <string name="ib_cd_stripe">Stripe Button</string>
+    <string name="ib_cd_channel">Channel Button</string>
+    <string name="ib_cd_empty">Empty</string>
+    <string name="ib_cd_girders">Girders Button</string>
+    <string name="ib_cd_title">Title</string>
+    <string name="ib_cd_dimension">Dimension image</string>
+
+    <string name="btn_calculate">Calculate</string>
+    <string name="btn_clear">Clear</string>
+    <string name="btn_email">Send email</string>
+
+    <string name="menu_item_info">INFO</string>
+
+    <string name="tv_developer">Developer: Mikhailo Lakhmaniuk</string>
+    <string name="tv_version">Ver: 1.00</string>
+    <string name="tv_email_me">With all proposals and suggestions send me an email</string>
+
+
+
+</resources>
