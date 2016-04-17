@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1d5697f6">
+    android:background="#ffffff">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -35,6 +35,26 @@
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/ib_cd_dimension"
                 android:src="@drawable/img_sheet_metal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_metal_type"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:id="@+id/spinner_metal_type"
+                android:layout_gravity="center_horizontal"
+                android:entries="@array/metals"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:dropDownSelector="#000000"
+                android:layout_weight="1"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

@@ -3,10 +3,12 @@ package com.example.android.simplemetalcalculator;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +21,7 @@ public class GirdersActivity extends AppCompatActivity {
     TextView weightResult;
     Button calculate;
     Button clear;
+    Spinner metalType;
     double a = 0;
     double b = 0;
     double c = 0;
@@ -28,7 +31,8 @@ public class GirdersActivity extends AppCompatActivity {
     double VolumeCm = 0;
     double WeightKg = 0;
     String weightResultString;
-    static final double DENSITY = 7.87;
+    int spinnerSelectedItem = 0;
+    Metals metal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +86,8 @@ public class GirdersActivity extends AppCompatActivity {
                 weightResult.setText("");
             }
         });
+
+        metalType = (Spinner)findViewById(R.id.spinner_metal_type);
     }
 
     public void showResult(View v) {
@@ -91,12 +97,16 @@ public class GirdersActivity extends AppCompatActivity {
         } else if (d >= a && d >= b) {
             Toast.makeText(this, "D must be less than A and B", Toast.LENGTH_LONG).show();
         } else {
-            weightResultString = String.format("%.2f", countChannelWeight(a, b, c, d, lengthVar));
+            weightResultString = String.format("%.2f", countWeight(a, b, c, d, lengthVar));
             weightResult.setText(weightResultString + "kg");
         }
     }
 
-    public double countChannelWeight(double a, double b, double c, double d, double length) {
+    public double countWeight(double a, double b, double c, double d, double length) {
+
+        spinnerSelectedItem = metalType.getSelectedItemPosition();
+        metal = new Metals();
+        double metalDensity = metal.density(spinnerSelectedItem);
 
         if ((c * 2) >= a && (c * 2) >= b) {
             Toast.makeText(this, "C must be less", Toast.LENGTH_SHORT).show();
@@ -104,8 +114,14 @@ public class GirdersActivity extends AppCompatActivity {
 
             squareMm = ((a * c) * 2) + (b - (c * 2)) * d;
             VolumeCm = (squareMm * (length * 1000)) / 1000;
-            WeightKg = (VolumeCm * DENSITY) / 1000;
+            WeightKg = (VolumeCm * metalDensity) / 1000;
         }return WeightKg;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
     }
 
     @Override

@@ -3,10 +3,12 @@ package com.example.android.simplemetalcalculator;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +20,7 @@ public class CornerActivity extends AppCompatActivity {
     TextView weightResult;
     Button calculate;
     Button clear;
+    Spinner metalType;
     double a = 0;
     double b = 0;
     double c = 0;
@@ -26,7 +29,8 @@ public class CornerActivity extends AppCompatActivity {
     double VolumeCm = 0;
     double WeightKg = 0;
     String weightResultString;
-    static final double DENSITY = 7.87;
+    int spinnerSelectedItem = 0;
+    Metals metal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +80,8 @@ public class CornerActivity extends AppCompatActivity {
                 weightResult.setText("");
             }
         });
+
+        metalType = (Spinner)findViewById(R.id.spinner_metal_type);
     }
 
     public void showResult(View v) {
@@ -94,10 +100,20 @@ public class CornerActivity extends AppCompatActivity {
 
     public double countWeight (double a, double b, double c, double length){
 
+        spinnerSelectedItem = metalType.getSelectedItemPosition();
+        metal = new Metals();
+        double metalDensity = metal.density(spinnerSelectedItem);
+
         squareMm = (a * c) + (b - c)*c;
         VolumeCm = (squareMm * (length*1000))/1000;
-        WeightKg = (VolumeCm * DENSITY)/1000;
+        WeightKg = (VolumeCm * metalDensity)/1000;
         return  WeightKg;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
     }
 
     @Override

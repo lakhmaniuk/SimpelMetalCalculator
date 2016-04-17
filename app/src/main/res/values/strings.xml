@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Simpel Metal Calculator</string>
-    <string name="tv_type_of_metal">Choose type of metal:</string>
+    <string name="tv_metal_profile">Choose metal profile:</string>
     <string name="tv_round_pipe">Round Pipe</string>
     <string name="tv_channel">Channel</string>
     <string name="tv_hexagon_rod">Hexagon Rod</string>
@@ -14,6 +14,7 @@
     <string name="tv_dimensions">Dimensions</string>
     <string name="tv_weight">Weight</string>
     <string name="tv_result">0</string>
+    <string name="tv_metal_type">Choose metal type:</string>
 
     <string name="et_enter_a">Enter A(mm)</string>
     <string name="et_enter_b">Enter B(mm)</string>
@@ -45,6 +46,21 @@
     <string name="tv_developer">Developer: Mikhailo Lakhmaniuk</string>
     <string name="tv_version">Ver: 1.00</string>
     <string name="tv_email_me">With all proposals and suggestions send me an email</string>
+
+    <string-array name="metals">
+        <item>Carbon steel</item>
+        <item>Stainless steel</item>
+        <item>Cast iron</item>
+        <item>Aluminium</item>
+        <item>Magnesium</item>
+        <item>Titanium</item>
+        <item>Cooper</item>
+        <item>Brass</item>
+        <item>Bronze</item>
+        <item>Zinc</item>
+        <item>Tin</item>
+        <item>Lead</item>
+    </string-array>
 
 
 

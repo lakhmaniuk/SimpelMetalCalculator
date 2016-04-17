@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:padding="8dp"
-            android:text="@string/tv_type_of_metal"
+            android:text="@string/tv_metal_profile"
             android:textStyle="bold"
             android:textSize="24sp"
             android:textColor="@android:color/black"

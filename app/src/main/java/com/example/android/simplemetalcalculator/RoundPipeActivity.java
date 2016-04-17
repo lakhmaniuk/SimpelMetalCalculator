@@ -3,10 +3,12 @@ package com.example.android.simplemetalcalculator;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +19,7 @@ public class RoundPipeActivity extends AppCompatActivity {
     TextView weightResult;
     Button calculate;
     Button clear;
+    Spinner metalType;
     double a = 0;
     double b = 0;
     double lengthVar = 0;
@@ -26,7 +29,8 @@ public class RoundPipeActivity extends AppCompatActivity {
     double sqOutCircle = 0;
     double sqInnerCircle = 0;
     String weightResultString;
-    static final double DENSITY = 7.87;
+    int spinnerSelectedItem = 0;
+    Metals metal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +79,8 @@ public class RoundPipeActivity extends AppCompatActivity {
             }
         });
 
+        metalType = (Spinner)findViewById(R.id.spinner_metal_type);
+
     }
 
     public void showResult (View v) {
@@ -83,14 +89,18 @@ public class RoundPipeActivity extends AppCompatActivity {
             Toast.makeText(this,"Enter value above zero!", Toast.LENGTH_SHORT).show();
         }else {
 
-            weightResultString = String.format("%.2f", countPipeWeight(a, b, lengthVar));
+            weightResultString = String.format("%.2f", countWeight(a, b, lengthVar));
             weightResult.setText(weightResultString + "kg");
 
         }
 
     }
 
-    public double countPipeWeight (double a, double b, double length){
+    public double countWeight (double a, double b, double length){
+
+        spinnerSelectedItem = metalType.getSelectedItemPosition();
+        metal = new Metals();
+        double metalDensity = metal.density(spinnerSelectedItem);
 
         if ((b * 2) >= a) {
             Toast.makeText(this, "B must be less", Toast.LENGTH_SHORT).show();
@@ -99,8 +109,14 @@ public class RoundPipeActivity extends AppCompatActivity {
             sqInnerCircle = 3.14 * Math.pow((a - b * 2) / 2, 2);
             pipeSquare = sqOutCircle - sqInnerCircle;
             pipeVolumeInCm = (pipeSquare * (length * 1000)) / 1000;
-            pipeWeightInKg = (pipeVolumeInCm * DENSITY) / 1000;
+            pipeWeightInKg = (pipeVolumeInCm * metalDensity) / 1000;
         }return  pipeWeightInKg;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
     }
 
     @Override

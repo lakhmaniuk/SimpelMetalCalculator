@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#49f9b010"
+    android:background="#49e0ddd7"
     tools:context="com.example.android.simplemetalcalculator.InfoActivity">
 
     <TextView
